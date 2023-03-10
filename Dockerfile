@@ -54,15 +54,19 @@ RUN R -e "install.packages('remotes')" && \
     R -e "BiocManager::install('Yikun/flowClust')" && \
     R -e "BiocManager::install('openCyto')" && \
     R -e "remotes::install_github('DillonHammill/openCyto')" && \
-    R -e "remotes::install_github('DillonHammill/HeatmapR')" && \
+    R -e "remotes::install_github('DillonHammill/HeatmapR')"
+
+# INSTALL CYTOEXPLORER
+RUN R -e "options('timeout' = 999999)" && \
     R -e "remotes::install_github('DillonHammill/CytoExploreRData')" && \
     R -e "remotes::install_github('DillonHammill/CytoExploreR', ref = 'stable')"
-
+    
 # TIDYVERSE
 RUN R -e "install.packages('tidyverse')"
 
 # PYTHON
-RUN R -e "install.packages('reticulate')" && \
+RUN R -e "options('timeout' = 999999)" && \
+    R -e "install.packages('reticulate')" && \
     R -e "reticulate::install_miniconda()" && \
     R -e "reticulate::virtualenv_create('cytoexplorer')" && \
     R -e "reticulate::py_install('pacmap', envname = 'cytoexplorer', pip = TRUE)" && \
