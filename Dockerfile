@@ -51,7 +51,7 @@ RUN R -e "install.packages('remotes')" && \
     R -e "BiocManager::install('flowCore')" && \
     R -e "BiocManager::install('CytoML')" && \
     R -e "BiocManager::install('flowWorkspace')" && \
-    R -e "BiocManager::install('Yikun/flowClust')" && \
+    R -e "BiocManager::install('flowClust')" && \
     R -e "BiocManager::install('openCyto')" && \
     R -e "remotes::install_github('DillonHammill/openCyto')" && \
     R -e "remotes::install_github('DillonHammill/HeatmapR')"
