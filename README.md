@@ -14,10 +14,16 @@ development or benchmarking.
 The pre-built docker images are available for download (amd64 platform)
 from docker hub: `docker pull dhammill/cytoexplorer-devel:v2.0.0`.
 
-This docker image contains: 1. Ubuntu 18.04 2. FFTW 3. FIt-SNE
-executable 4. Open-source cytoverse packages 5. CytoExploreRData
-datasets 6. CytoExploreR 7. tidyverse packages 8. Miniconda virtual
-environment (“cytoexplorer”)
+This docker image contains:
+
+1.  Ubuntu 18.04
+2.  FFTW
+3.  FIt-SNE executable
+4.  Open-source cytoverse packages
+5.  CytoExploreRData datasets
+6.  CytoExploreR
+7.  tidyverse packages
+8.  Miniconda virtual environment (“cytoexplorer”)
 
 # Build Docker image locally
 
@@ -31,7 +37,7 @@ environment (“cytoexplorer”)
 
 # Start Docker container & mount local drives
 
-1.  Either pulkl down pre-built image from Docker Hub
+1.  Either pull down pre-built image from Docker Hub
     (`docker pull dhammill/cytoexplorer-devel:v2.0.0`) or build image
     locally as above.
 
