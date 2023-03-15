@@ -40,12 +40,9 @@ This docker image contains:
     locally as above.
 
 2.  Run the CytoExploreR version 2.0.0 docker image inside a container
-    and mount directory (edit /path/to/mount):
+    and mount directory (edit /path/to/mount). Remove `dhammill` below
+    if image was built locally.
 
 ``` r
-docker run --rm -dit \  
---mount type=bind,source=/path/to/mount,destination=/home/rstudio/project \
--p 8787:8787 \
--e PASSWORD=cytoexplorer \
-cytoexplorer:v2.0.0`
+docker run --rm -dit --mount type=bind,source=/path/to/mount,destination=/home/rstudio/project -p 8787:8787 -e PASSWORD=cytoexplorer dhammill/cytoexplorer-devel:v2.0.0
 ```
