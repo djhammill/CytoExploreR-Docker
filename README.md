@@ -3,8 +3,6 @@ CytoExploreR-Docker
 Dillon Hammill
 2023-03-10
 
-# CytoExploreR-Docker
-
 Docker development environment for CytoExploreR Version 2.0.0
 
 This repository contains a dockerfile and associated build instructions
