@@ -21,7 +21,6 @@ This docker image contains:
 5.  CytoExploreRData datasets
 6.  CytoExploreR
 7.  tidyverse packages
-8.  Miniconda virtual environment (“cytoexplorer”)
 
 # Build Docker image locally
 
