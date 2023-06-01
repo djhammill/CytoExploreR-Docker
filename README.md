@@ -45,3 +45,8 @@ This docker image contains:
 ``` r
 docker run --rm -dit --mount type=bind,source=/path/to/mount,destination=/home/rstudio/project -p 8787:8787 -e PASSWORD=cytoexplorer dhammill/cytoexplorer-devel:v2.0.0
 ```
+
+3.  Open `localhost:8787` in a web browser.
+
+4.  Log into the RStudio session using `username = rstudio` and
+    `password = cytoexplorer`.
