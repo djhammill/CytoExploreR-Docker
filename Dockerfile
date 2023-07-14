@@ -5,7 +5,7 @@ FROM bioconductor/bioconductor_docker:latest
 RUN apt-get update && apt-get install --no-install-recommends -y \
     libopenblas-dev \
     autoconf \
-    libtool \
+    libltdl-dev \
     zlib1g-dev \
     wget \
     unzip \
