@@ -36,7 +36,13 @@ RUN cd /. && \
 
 # R DEPENDENCIES
 RUN R -e "options('timeout' = 999999)" && \
-    R -e "BiocManager::install(c('cytolib', 'flowCore', 'flowWorkspace', 'openCyto', 'CytoML', 'ggcyto'))" && \
+    R -e "devtools::install_github('RGLab/cytolib')" &&\
+    R -e "devtools::install_github('RGLab/flowCore')" &&\
+    R -e "devtools::install_github('RGLab/flowWorkspace')" &&\
+    R -e "devtools::install_github('RGLab/openCyto')" &&\
+    R -e "devtools::install_github('RGLab/CytoML')" &&\
+    R -e "devtools::install_github('RGLab/ggcyto')" &&\
+    R -e "devtools::install_github('RGLab/cytoqc')" &&\
     R -e "devtools::install_github('DillonHammill/openCyto')" && \
     R -e "devtools::install_github('DillonHammill/CytoExploreRData')" && \
     R -e "devtools::install_github('DillonHammill/DataEditR')" && \
