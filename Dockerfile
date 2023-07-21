@@ -36,6 +36,7 @@ RUN cd /. && \
 
 # R DEPENDENCIES
 RUN R -e "options('timeout' = 999999)" && \
+    R -e "devtools::install_github('RGLab/RProtoBufLib')" && \
     R -e "devtools::install_github('RGLab/cytolib')" &&\
     R -e "devtools::install_github('RGLab/flowCore')" &&\
     R -e "devtools::install_github('RGLab/flowWorkspace')" &&\
