@@ -30,4 +30,4 @@ jobs:
         platforms: linux/amd64,linux/arm64
         push: true
         tags: dhammill/cytoexplorer-devel:latest
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
