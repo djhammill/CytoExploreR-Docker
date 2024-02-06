@@ -19,10 +19,6 @@ jobs:
       with: 
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-    - name: Docker Image Tag
-      run: |
-        echo "DOCKER_IMAGE_VERSION=$(grep Version DESCRIPTION | awk '{print $2}')" >> $GITHUB_ENV
-        echo "DOCKER_IMAGE_VERSION="v${DOCKER_IMAGE_VERSION}"" >> GITHUB_ENV
     - name: CytoExploreR Docker Build & Push
       uses: docker/build-push-action@v4
       with:
