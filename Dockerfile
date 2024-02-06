@@ -37,7 +37,7 @@ RUN cd /. && \
 # R DEPENDENCIES
 RUN R -e "options('timeout' = 999999)" && \
     R -e "install.packages('BiocManager')" &&\
-    R -e "BiocManager::install(c('cytolib', 'flowCore', 'flowWorkspace', 'openCyto', 'ggcyto', 'CytoML', 'flowWorkspaceData')" &&\
+    R -e "BiocManager::install(c('cytolib', 'flowCore', 'flowWorkspace', 'openCyto', 'ggcyto', 'CytoML', 'flowWorkspaceData'))" &&\
     R -e "devtools::install_github('RGLab/cytoqc')" &&\
     R -e "devtools::install_github('DillonHammill/openCyto', force = TRUE)" && \
     R -e "devtools::install_github('DillonHammill/CytoExploreRData')" && \
